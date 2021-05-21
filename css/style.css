@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&family=Pacifico&display=swap");
+/*************
+Mixins
+*************/
+/*************
+Basic styles
+*************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #101820FF;
+  background-image: url(../img/bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 50px 0; }
+
+.container {
+  width: 80%;
+  margin: auto; }
+
+/*************
+Navigation
+*************/
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 50px; }
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column; } }
+  nav .logo {
+    text-decoration: none;
+    font-family: 'Pacifico', cursive;
+    color: #101820FF;
+    font-size: 2rem;
+    padding: 5px 20px;
+    background-color: #F2AA4CFF;
+    border-radius: 5px; }
+    @media (max-width: 768px) {
+      nav .logo {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px; } }
+    nav .logo:hover {
+      opacity: .9;
+      transition: 0.3s ease; }
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+    @media (max-width: 768px) {
+      nav ul {
+        justify-content: flex-start; } }
+    nav ul a {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #101820FF;
+      margin-left: 40px;
+      font-size: 1.2rem; }
+      @media (max-width: 768px) {
+        nav ul a {
+          margin-left: 25px; } }
+      nav ul a:hover {
+        color: #F2AA4CFF;
+        transition: 0.3s ease; }
+
+/*************
+Header
+*************/
+header {
+  background-color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px; }
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column; } }
+  header .col:first-child {
+    flex: 2; }
+    @media (max-width: 768px) {
+      header .col:first-child {
+        flex: 1; } }
+    header .col:first-child h1 {
+      font-size: 4rem;
+      padding-bottom: 40px; }
+      @media (max-width: 768px) {
+        header .col:first-child h1 {
+          font-size: 2.5rem; } }
+    header .col:first-child h3 {
+      font-size: 1.7rem;
+      font-weight: 300; }
+      @media (max-width: 768px) {
+        header .col:first-child h3 {
+          font-size: 1.3rem;
+          margin-bottom: 30px; } }
+  header .col:last-child {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    header .col:last-child button:first-child {
+      background-color: #101820FF;
+      color: #fff;
+      padding: 20px 0;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      margin-bottom: 20px; }
+      header .col:last-child button:first-child:hover {
+        cursor: pointer;
+        transition: 0.3s ease;
+        background-color: #F2AA4CFF;
+        color: #101820FF; }
+    header .col:last-child button:last-child {
+      background-color: #F2AA4CFF;
+      color: #101820FF;
+      padding: 20px 0;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1rem; }
+      header .col:last-child button:last-child:hover {
+        background-color: #101820FF;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.3s ease; }
+
+/*************
+Posts
+*************/
+.posts {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 50px; }
+  .posts .col {
+    flex: 0 0 31%; }
+    @media (max-width: 768px) {
+      .posts .col {
+        flex: 0 0 100%; } }
+    .posts .col img {
+      width: 100%;
+      height: auto;
+      display: block; }
+    .posts .col .text {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px 30px 40px 30px;
+      text-align: center; }
+      .posts .col .text h2 {
+        font-size: 2rem;
+        text-align: center; }
+        .posts .col .text h2::after {
+          display: block;
+          content: "";
+          height: 1px;
+          width: 100%;
+          margin: 20px auto;
+          background-color: #101820FF; }
+      .posts .col .text p {
+        text-align: justify;
+        padding-bottom: 10px; }
+      .posts .col .text button {
+        background-color: #101820FF;
+        color: #fff;
+        padding: 20px 0;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        padding: 20px;
+        opacity: .9; }
+        .posts .col .text button:hover {
+          cursor: pointer;
+          transition: 0.3s ease;
+          background-color: #F2AA4CFF;
+          color: #101820FF;
+          opacity: .9; }
+
+/*************
+Footer
+*************/
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #F2AA4CFF;
+  opacity: .9;
+  padding: 30px; }
+  @media (max-width: 768px) {
+    footer {
+      flex-direction: column; } }
+  footer h3 {
+    font-size: 2rem; }
+    footer h3::after {
+      display: block;
+      content: "";
+      height: 1px;
+      width: 100px;
+      background-color: #101820FF;
+      margin: 20px 0; }
+  footer .col:first-child {
+    flex: 2; }
+    footer .col:first-child p {
+      padding-right: 50px; }
+      @media (max-width: 768px) {
+        footer .col:first-child p {
+          padding-right: 10px; } }
+  footer .col:nth-child(2) {
+    flex: 1; }
+    footer .col:nth-child(2) ul {
+      list-style: none; }
+      footer .col:nth-child(2) ul a {
+        color: #101820FF; }
+  footer .col:last-child {
+    flex: 1; }
+    footer .col:last-child a {
+      font-size: 2rem;
+      color: #101820FF;
+      margin-right: 10px; }
+      footer .col:last-child a:hover {
+        opacity: .8;
+        transition: 0.3s ease; }
+
+/*************
+Right sidebar
+*************/
+.rightSidebar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  @media (max-width: 768px) {
+    .rightSidebar {
+      flex-direction: column; } }
+  .rightSidebar article {
+    flex: 2;
+    padding-right: 30px; }
+    @media (max-width: 768px) {
+      .rightSidebar article {
+        padding-right: 0; } }
+    .rightSidebar article img {
+      width: 100%;
+      height: auto;
+      display: block; }
+    .rightSidebar article .text {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 40px 30px; }
+      .rightSidebar article .text h2 {
+        font-size: 2.5rem; }
+        .rightSidebar article .text h2::after {
+          display: block;
+          content: "";
+          height: 1px;
+          width: 100%;
+          margin: 20px auto;
+          background-color: #101820FF; }
+      .rightSidebar article .text p {
+        text-align: justify; }
+  .rightSidebar aside {
+    flex: 1;
+    padding-left: 20px; }
+    @media (max-width: 768px) {
+      .rightSidebar aside {
+        padding-left: 0; } }
+    .rightSidebar aside h3 {
+      font-size: 1.5rem; }
+      .rightSidebar aside h3::after {
+        display: block;
+        content: "";
+        height: 1px;
+        width: 100%;
+        margin: 20px auto;
+        background-color: #101820FF; }
+    .rightSidebar aside ul {
+      list-style: none;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      line-height: 2; }
+      .rightSidebar aside ul a {
+        color: #101820FF;
+        font-size: 1.2rem; }
+
+/*************
+Kontakt
+*************/
+.kontakt form {
+  display: flex;
+  flex-direction: column; }
+  .kontakt form input, .kontakt form textarea {
+    padding: 10px;
+    font-size: 1.1rem;
+    border: 1px solid #F2AA4CFF;
+    margin-bottom: 10px;
+    letter-spacing: 1px; }
+  .kontakt form button {
+    background-color: #101820FF;
+    color: #fff;
+    padding: 20px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin-bottom: 20px; }
+    .kontakt form button:hover {
+      cursor: pointer;
+      transition: 0.3s ease;
+      background-color: #F2AA4CFF;
+      color: #101820FF; }
+
+/*************
+Responsive
+*************/
+@media (max-width: 768px) {
+  .container {
+    width: 90%; } }
+
+/*# sourceMappingURL=style.css.map */
